@@ -1,10 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Card from "../Components/Card/card";
 import Title from "../Components/Title/title";
 import PatientRow from "./PatientRow/patientRow"
 const PatientList = () => {
     
-    const [date, SetDate] = useState('Today');
+    // const [date, SetDate] = useState('Today');
+    const date = 'Today';
     // const hideChosingDate = useRef(null);
 
     // function selectDate()

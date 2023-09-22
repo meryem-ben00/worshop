@@ -18,7 +18,7 @@ const PatientRow = (props) => {
                 <p className="font-medium text-xl leading-normal">{props.name}</p>
                 <p className={"text-["+getTheColor(props.type)+ "] font-normal text-sm"}>{props.type}</p>
             </div>
-            <div className={"col-start-5 col-end-7 rounded-lg " + "bg-["+getTheColor(props.type)+ "] bg-opacity-30 grid content-center justify-center p-1"}>{props.time}</div>
+            <div className={"col-start-5 col-end-7 rounded-lg bg-["+getTheColor(props.type)+ "] bg-opacity-30 grid content-center justify-center p-1"}>{props.time}</div>
         </div>
     );
 }
