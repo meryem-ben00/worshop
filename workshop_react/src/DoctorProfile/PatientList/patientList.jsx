@@ -4,43 +4,35 @@ import Title from "../Components/Title/title";
 import PatientRow from "./PatientRow/patientRow"
 const PatientList = () => {
     
-    // const [date, SetDate] = useState('Today');
     const date = 'Today';
-    // const hideChosingDate = useRef(null);
-
-    // function selectDate()
-    // {
-    //     hideChosingDate.current.focus();
-    //     hideChosingDate.current.select();
-    // }
     const PatientListObject = [
-        {name: "Saad AKLLAM", type: "Weekly Visit", time: "1:37 PM"}, 
-        {name: "Saad AKLLAM9", type: "Routine Checkup", time: "1:37 PM"}, 
-        // {name: "Saad AKLLAMd", type: "Weekly Visit", time: "1:37 PM"},
-        // {name: "Saad AKLLAM", type: "Report", time: "1:37 PM"},
-        {name: "Saad AKLLAM", type: "Weekly Visit", time: "1:37 PM"},
-        // {name: "Saad AKLLAMc", type: "Weekly Visit", time: "1:37 PM"},
-        {name: "EVBLOOD", type: "Report", time: "1:42 PM"},
+        {name: "Saad AKLLAM", type: "Weekly Visit", time: "1 : 37 PM"}, 
+        {name: "Amy Dunham", type: "Routine Checkup", time: "1 : 37 PM"}, 
+        {name: "Saad AKLLAM", type: "Weekly Visit", time: "1 : 37 PM"},
+        {name: "Mohcine ghalmi", type: "Report", time: "1 : 42 PM"},
     ]
     return (
-        <Card>
-            <div className="grid grid-cols-6">
+        <Card extraStyle="w-[446px]">
+            <div className="grid grid-cols-6 mb-[5px]">
                 <Title givingExtraSpace="col-end-0 col-span-4">patient list</Title>
-                <p className="col-end-8">{date}</p>
-                {/* <input  ref={hideChosingDate} type="date"></input> 
-                <button onClick={selectDate}>xyz</button> */}
+                <div className="col-start-7 col-end-7 opacity-60 text-sm flex justify-center gap-1 items-center" >
+                    {date}
+                    <p className="rotate-90 text-[24px] font-light">{'>'}</p>
+                </div>
             </div>
-            {
-                PatientListObject.map((e, index) =>
-                    {
-                        return <PatientRow key={index}
-                                        name={e.name}
-                                        time={e.time}
-                                        type={e.type}/>
-                    })
-            }
+            <div>
+                {
+                     PatientListObject.map((e, index) =>
+                      {
+                          return <PatientRow key={index}
+                                    name={e.name}
+                                    time={e.time}
+                                    type={e.type}/>
+                      })
+                }
+            </div>
             <div className="grid grid-cols-6 mt-7">
-                <p className="underline decoration-solid font-medium text-lg col-start-3 col-span-4">View more</p>
+                <p className="underline decoration-solid font-medium text-lg col-start-3 col-span-4 text-[18px] leading-none">View more</p>
             </div>
         </Card>
     );

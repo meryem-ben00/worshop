@@ -2,7 +2,14 @@ body {
   margin: 0;
   padding: 30px;
   background-color: #1E2E5C;
-  font-family: poppins; 
+  font-family: poppins;
+}
+
+html
+{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 

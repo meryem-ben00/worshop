@@ -7,7 +7,7 @@ import PatientList from "./PatientList/patientList";
 const Profile = () => {
 
     return (
-        <div className="grid grid-rows-2 gap-4">
+        <div className="grid grid-rows-2 gap-4 max-w-[1440px]">
             <div className="grid grid-cols-3 gap-4">
                 <Card >1</Card>
                 <PatientList />

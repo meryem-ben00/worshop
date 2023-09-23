@@ -11,9 +11,13 @@ const AvatarUser = (props) => {
     if (i < props.name.length)
         Avtr += props.name[i + 1];
     return (
-        <div  style={{borderColor: `rgba(${props.backColor.r}, ${props.backColor.g}, ${props.backColor.b}, 1)`}} className="col-end-0 grid rounded-full border-[1px] border-opacity-15 content-center justify-center h-[60px] w-[60px]">
+        <div style={{borderColor: `rgba(${props.backColor.r}, ${props.backColor.g}, ${props.backColor.b}, 0.6)`}}
+                className={"grid rounded-full border-[1px] border-opacity-15 content-center justify-center h-[60px] w-[60px]"}>
+            
             <div className="p-[30px]">
-             <p style={{backgroundColor: `rgba(${props.backColor.r}, ${props.backColor.g}, ${props.backColor.b}, 0.6)`}} className="grid bg-opacity-60 rounded-full h-[50px] w-[50px] justify-center content-center">{Avtr}</p>
+             <p style={{backgroundColor: `rgba(${props.backColor.r}, ${props.backColor.g}, ${props.backColor.b}, 0.15)`}}
+                className="grid bg-opacity-60 rounded-full h-[50px] w-[50px] justify-center content-center">{Avtr}</p>
+            
             </div>
         </div>
     );
