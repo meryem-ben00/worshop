@@ -1,6 +1,6 @@
 import React from 'react';
 import arrowRight from '../Images/Right-2.png';
-import avatar from '../Images/Avatar (1).png';
+import avatar from '../Images/Avatar (2).png';
 
 const Comp2 = ({data}) => {
   return (
@@ -21,16 +21,15 @@ const Comp2 = ({data}) => {
             {data.map((item) => {
               return(
                 <tr className='text-white'>
-              <td className='py-4 flex items-center '> <img src={avatar} alt='' /> Soufiane</td>
-              <td className='py-4'>12233</td>
-              <td className='py-4'>soufina@gmail.com</td>
-              <td className='py-4'>0998798778878</td>
-              <td className='py-4'>2039</td>
+              <td className='py-4 flex items-center  '> <img className='p-5' src={avatar} alt='' /> {item.name}</td>
+              <td className='py-4'>{item.id}</td>
+              <td className='py-4'>{item.email}</td>
+              <td className='py-4'>{item.phoneNumber}</td>
+              <td className='py-4'>{item.dateAdded}</td>
               <td className='py-4'>
                 <span
-                  className={`inline-block py-1 rounded-md  text-[#5F8D4E] px-3 bg-[#F4FFF3]`}
-                >
-                  Approved
+                  className={`inline-block mx-auto  flex items-center 'text-[#5F8D4E] justify-center bg-[#F4FFF3]' text-[11px] font-medium	 rounded-md w-[74px] h-[26px] ${item.status === "declined" ? 'bg-[#FFE2E5] text-[#F64E60]' :'text-[#5F8D4E]  bg-[#F4FFF3]'}`}>
+                  {item.status}
                 </span>
               </td>
               <td className='py-4'>
