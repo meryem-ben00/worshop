@@ -8,7 +8,6 @@ const NavBar=()=>{
 
 return(
 
-
 <nav class="bg-green-700  fixed w-full z-20 top-0 left-0 border-b border-green-200 ">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="https://flowbite.com/" class="flex items-center">
