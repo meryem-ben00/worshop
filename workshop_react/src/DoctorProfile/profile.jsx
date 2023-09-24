@@ -1,6 +1,6 @@
 import Card from "./Components/Card/card";
 import PatientList from "./PatientList/patientList";
-
+import Calendar from "./Calendar/calendar";
 
 
 
@@ -11,7 +11,8 @@ const Profile = () => {
             <div className="grid grid-cols-3 gap-4">
                 <Card >1</Card>
                 <PatientList />
-                <Card>3</Card>
+                {/* <Card>3</Card> */}
+                <Calendar />
             </div>
             <div className="grid grid-cols-3 gap-4">
                 <Card colSpanStyle="col-span-2">4</Card>
