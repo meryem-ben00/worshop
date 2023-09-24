@@ -40,5 +40,4 @@ const Pagination = () => {
     </div>
   );
 }
-
 export default Pagination;
