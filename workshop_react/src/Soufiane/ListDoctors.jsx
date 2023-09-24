@@ -1,14 +1,13 @@
-import React from 'react';
 import Comp1 from './Comp/Comp1';
 import Doctors from './Comp/Doctors';
-import Paiginatio from './Comp/Pagination';
+import Pagination from './Comp/Pagination';
 
 const List = ({data = []}) => {
   return (
     <div className='container mx-auto  mt-20 '>
       <Comp1/>
-      <Doctors data ={data} />
-      <Paiginatio/>
+      <Doctors data ={data}/>
+      <Pagination/>
     </div>
   );
 }
