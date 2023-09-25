@@ -1,22 +1,37 @@
-import Card from "./Components/Card/card";
 import PatientList from "./PatientList/patientList";
 import Calendar from "./Calendar/calendar";
+import Consultation from "./Consultation/consultation";
+import DailyRead from "./DailyRead/dailyRead";
+import StatistiqueCard from "./Components/StatistiqueCard/StatistiqueCard";
 
 
 
 const Profile = () => {
 
     return (
-        <div className="grid grid-rows-2 gap-4 max-w-[1440px]">
-            <div className="grid grid-cols-3 gap-4">
-                <Card >1</Card>
+        <div className="grid grid-rows-2 auto-row-max gap-4 max-w-[1440px]">
+            <div className="grid grid-cols-3 gap-4 auto-cols-max">
+                <div>
+                    <h1 className="capitalize text-white font-semibold text-[33px] mb-[27px]"><span className="text-[#2E8544]">Dr.</span>Brooklyn Simmons</h1>
+                    <h3 className="text-white font-medium text-[22px]">Visits for Today</h3>
+                    <h2 className="text-white font-medium text-[55px]">104</h2>
+                    <div className="grid  grid-rows-2 gap-[29px]">
+                    <div className="grid grid-cols-2 gap-[45px]">
+                        <StatistiqueCard extraStyle="grid-cols-0"/>
+                        <StatistiqueCard extraStyle="grid-cols-1"/>
+                    </div>
+                    <div className="grid grid-cols-2 gap-[45px]">
+                        <StatistiqueCard extraStyle="grid-cols-0"/>
+                        <StatistiqueCard extraStyle="grid-cols-1"/>
+                    </div>
+                    </div>
+                </div>
                 <PatientList />
-                {/* <Card>3</Card> */}
                 <Calendar />
             </div>
-            <div className="grid grid-cols-3 gap-4">
-                <Card colSpanStyle="col-span-2">4</Card>
-                <Card>5</Card>
+            <div className="grid grid-cols-3 gap-4 h-[315px]">
+            <Consultation />
+            <DailyRead />
             </div>
         </div>
     )

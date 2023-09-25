@@ -3,7 +3,7 @@ import Profile from './DoctorProfile/profile';
 
 function App() {
   return (
-    <Profile/>
+    <Profile />
   );
 }
 
