@@ -1,10 +1,9 @@
 
 import React from 'react';
 import data from './Soufiane/Data';
-import Users from './Soufiane/ListUsers';
-import List from './Soufiane/ListDoctors';
+import Users from './Soufiane/Pages/ListUsers';
+import List from './Soufiane/Pages/ListDoctors';
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
-
 
 const router = createBrowserRouter([
   {

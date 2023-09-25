@@ -3,7 +3,7 @@ import arrowRight from '../Images/Right-2.png';
 const Doctors = ({data , isUser = false}) => {
   return (
     <div className='py-8'>
-      <table className='w-full'>
+      <table className='w-full '>
       <thead>
           <tr className='w-full rounded-md bg-[#FAFAFA] text-[#B5B5C3]'>
             <th className='rounded-tl-md rounded-bl-md  py-3'>Name </th>
