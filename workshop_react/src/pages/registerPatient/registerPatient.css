@@ -1,0 +1,11 @@
+.inputForm {
+  background: rgba(217, 217, 217, 0.58);
+}
+
+.inputForm:focus {
+  outline-style: none;
+}
+
+.houseAddressInput::placeholder {
+  color: white;
+}
