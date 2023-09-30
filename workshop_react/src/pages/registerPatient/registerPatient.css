@@ -1,3 +1,7 @@
+body {
+  /* Suggestion: so all the interfaces have the same background color so if we add this style to the body we will be solving alot of problems*/
+  background-color: #1e2e5c;
+}
 .inputForm {
   background: rgba(217, 217, 217, 0.58);
 }
@@ -9,3 +13,7 @@
 .houseAddressInput::placeholder {
   color: white;
 }
+
+/* .submitButton:hover {
+} 
+*/

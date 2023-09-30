@@ -8,8 +8,8 @@ const RegisterPatient = () => {
   return (
     <>
       <NavBar />
-      <div className="bg-bgColor h-fit flex items-center justify-center">
-        <div className="mx-48 mt-10 mb-32 w-full flex flex-col gap-4 max-w-[1077px]">
+      <div className="bg-bgColor flex justify-center min-h-full">
+        <div className="mx-48 mt-10 mb-10 w-full flex flex-col gap-4 max-w-[1077px]">
           <div className="relative mb-7">
             <Link to={"/"} className="absolute right-0">
               <Arrow />
@@ -24,7 +24,7 @@ const RegisterPatient = () => {
             Id: {"#123"}
           </p>
 
-          <form onSubmit={console.log("Test")} className="flex flex-col gap-5">
+          <form onSubmit={console.log("Test")} className="flex flex-col gap-6">
             {" "}
             {/** add the onSubmit function */}
             <div className="flex gap-12 justify-center items-center">
@@ -38,7 +38,7 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="name"
-                  className="inputForm max-w-lg py-3 pl-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
               <div className="flex flex-col gap-3 w-full">
@@ -51,7 +51,73 @@ const RegisterPatient = () => {
                 <input
                   type="datetime-local"
                   name="date"
-                  className="inputForm max-w-lg py-3 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                />
+              </div>
+            </div>
+            <div className="flex gap-12 justify-center items-center">
+              <div className="flex flex-col gap-3 w-full">
+                <label
+                  htmlFor="age"
+                  className="text-white text-2xl font-semibold ml-4"
+                >
+                  Age
+                </label>
+                <input
+                  type="text"
+                  name="age"
+                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
+                />
+              </div>
+              <div className="flex flex-col gap-3 w-full">
+                <label
+                  htmlFor="gender "
+                  className="text-white text-2xl font-semibold ml-4"
+                >
+                  Gender
+                </label>
+                <div class="flex gap-6">
+                  <div className="flex gap-2">
+                    <label className="text-white text-lg font-light">
+                      Male
+                    </label>
+                    <input type="radio" id="male" name="gender" value="Male" />
+                  </div>
+                  <div className="flex gap-2">
+                    <label className="text-white text-lg font-light">
+                      Female
+                    </label>
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="Female"
+                    />
+                  </div>
+                  <div className="flex gap-2">
+                    <label className="text-white text-lg font-light">
+                      Author
+                    </label>
+                    <input
+                      type="radio"
+                      id="author"
+                      name="gender"
+                      value="Author"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 w-full">
+                <label
+                  htmlFor="bloodGroup"
+                  className="text-white text-2xl font-semibold"
+                >
+                  Blood Group
+                </label>
+                <input
+                  type="text"
+                  name="bloodGroup"
+                  className="inputForm max-w-lg py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
@@ -67,7 +133,7 @@ const RegisterPatient = () => {
                   type="text"
                   name="houseAddress"
                   placeholder="name,house,city,..."
-                  className="inputForm houseAddressInput py-3 pl-5 rounded-3xl text-white text-lg font-light w-full"
+                  className="inputForm houseAddressInput py-2 pl-5 rounded-3xl text-white text-lg font-light w-full"
                 />
               </div>
             </div>
@@ -82,7 +148,7 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="phone"
-                  className="inputForm max-w-lg py-3 pl-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
               <div className="flex flex-col gap-3 w-full">
@@ -95,7 +161,7 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="dateBirth"
-                  className="inputForm max-w-lg py-3 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
@@ -110,12 +176,12 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="departement"
-                  className="inputForm max-w-lg py-3 pl-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center self-end w-full">
                 <button
-                  className="bg-[#2E8544] rounded-3xl text-2xl font-medium text-white"
+                  className="submitButton bg-[#2E8544] rounded-3xl text-2xl font-medium text-white w-full py-2"
                   onSubmit={console.log("Submitting")}
                 >
                   Register
