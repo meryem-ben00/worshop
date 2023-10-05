@@ -6,6 +6,10 @@ module.exports = {
       colors: {
         bgColor: "#1E2E5C",
       },
+      screens: {
+        "max-rp": { max: "900px" }, // custom media query for registerPatient.
+        "between-rp": { max: "900px", min: "650px" },
+      },
     },
   },
   plugins: [],

@@ -8,8 +8,8 @@ const RegisterPatient = () => {
   return (
     <>
       <NavBar />
-      <div className="bg-bgColor flex justify-center min-h-full">
-        <div className="mx-48 mt-10 mb-10 w-full flex flex-col gap-4 max-w-[1077px]">
+      <div className="bg-bgColor flex justify-center min-h-full mx-5">
+        <div className="max-rp:mx-12 mx-48 mt-10 mb-10 w-full flex flex-col gap-4 max-w-[1077px]">
           <div className="relative mb-7">
             <Link to={"/"} className="absolute right-0">
               <Arrow />
@@ -24,11 +24,14 @@ const RegisterPatient = () => {
             Id: {"#123"}
           </p>
 
-          <form onSubmit={console.log("Test")} className="flex flex-col gap-6">
+          <form
+            onSubmit={console.log("Test")}
+            className="flex flex-col gap-6 max-rp:gap-12"
+          >
             {" "}
             {/** add the onSubmit function */}
-            <div className="flex gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full">
+            <div className="flex max-rp:flex-col gap-12 justify-center items-center ">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="name"
                   className="text-white text-2xl font-semibold ml-4"
@@ -38,25 +41,25 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="name"
-                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex flex-col gap-3 w-full">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="date"
-                  className="text-white text-2xl font-semibold"
+                  className="text-white text-2xl font-semibold ml-4"
                 >
                   Date
                 </label>
                 <input
                   type="datetime-local"
                   name="date"
-                  className="inputForm max-w-lg py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
-            <div className="flex gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full">
+            <div className="flex max-rp:flex-col gap-12 justify-center items-center">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="age"
                   className="text-white text-2xl font-semibold ml-4"
@@ -66,17 +69,17 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="age"
-                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex flex-col gap-3 w-full">
+              <div className="flex flex-col px-7 gap-3 w-full max-rp:w-fit line">
                 <label
                   htmlFor="gender "
                   className="text-white text-2xl font-semibold ml-4"
                 >
                   Gender
                 </label>
-                <div class="flex gap-6">
+                <div className="flex gap-6">
                   <div className="flex gap-2">
                     <label className="text-white text-lg font-light">
                       Male
@@ -107,22 +110,22 @@ const RegisterPatient = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-3 w-full">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="bloodGroup"
-                  className="text-white text-2xl font-semibold"
+                  className="text-white text-2xl font-semibold ml-4"
                 >
                   Blood Group
                 </label>
                 <input
                   type="text"
                   name="bloodGroup"
-                  className="inputForm max-w-lg py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
             <div className="flex gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="houseAddress"
                   className="text-white text-2xl font-semibold ml-4"
@@ -133,12 +136,12 @@ const RegisterPatient = () => {
                   type="text"
                   name="houseAddress"
                   placeholder="name,house,city,..."
-                  className="inputForm houseAddressInput py-2 pl-5 rounded-3xl text-white text-lg font-light w-full"
+                  className="inputForm max-rp:max-w-lg between-rp:w-[32rem] houseAddressInput py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light w-full"
                 />
               </div>
             </div>
-            <div className="flex gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full">
+            <div className="flex max-rp:flex-col gap-12 justify-center items-center">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="phone"
                   className="text-white text-2xl font-semibold ml-4"
@@ -148,25 +151,25 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="phone"
-                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex flex-col gap-3 w-full">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="dateBirth"
-                  className="text-white text-2xl font-semibold"
+                  className="text-white text-2xl font-semibold ml-4"
                 >
                   Date or Birth
                 </label>
                 <input
                   type="text"
                   name="dateBirth"
-                  className="inputForm max-w-lg py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
-            <div className="flex gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full">
+            <div className="flex max-rp:flex-col gap-12 justify-center items-center">
+              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
                 <label
                   htmlFor="departement"
                   className="text-white text-2xl font-semibold ml-4"
@@ -176,12 +179,12 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="departement"
-                  className="inputForm max-w-lg py-2 pl-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex justify-center items-center self-end w-full">
+              <div className="flex justify-center items-center self-end w-full mt-3">
                 <button
-                  className="submitButton bg-[#2E8544] rounded-3xl text-2xl font-medium text-white w-full py-2"
+                  className="submitButton max-w-lg bg-[#2E8544] rounded-3xl text-2xl font-medium text-white w-full py-2"
                   onSubmit={console.log("Submitting")}
                 >
                   Register
