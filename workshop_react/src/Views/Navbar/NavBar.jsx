@@ -1,54 +1,52 @@
-import React from "react";
-
-
-const NavBar=()=>{
-
+import { useState } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 
 
-return(
+const NavBar = () => {
 
-
-<nav class="bg-green-700  fixed w-full z-20 top-0 left-0 border-b border-green-200 ">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center">
-      {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo"/> */}
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BimoHealth</span>
-  </a>
-  <div class="flex md:order-2">
-  <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 rounded-full w-8 mr-3" alt="Flowbite Logo"/> 
-  </div>
-  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-green-700">
-    <li>
-        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
-
-
-
-
-
-
-
-)
-
-
-
+  const [selected, setSelect] = useState(0);
+  function getIndex(index)
+  {
+    setSelect(index)
+  }
+  let navList = ["Dashboard", "Users", "Patients", "Test"];
+  return (
+    <div className="bg-[#2E8544]">
+      <nav className="pr-[24px] pl-[24px] bg-[#2E8544] h-[69px] flex justify-between items-center text-[#F4FFF3] font-semibold">
+        <div className="flex gap-[95px] items-center">
+            <img className="h-[25px]" src="/images/logo.svg" alt="LOGO" />
+            <div className="flex text-base ">
+              { 
+                navList.map((navName, index) => {
+                  return <NavLink to="/" key={index}
+                  onClick={() => getIndex(index)}
+                  // className={selected === index + 1 ? "rounded-br-lg bg-[#2E8544] h-[57px]" : 
+                  //   selected === index - 1 ? "rounded-bl-lg bg-[#2E8544] h-[57px]" :
+                  //   selected !== index ? "bg-[#2E8544] h-[57px]" :  "rounded-tl-lg rounded-tr-lg h-[57px]"
+                  // }
+                  >{navName}</NavLink>
+                })
+              }
+            </div>
+        </div>
+        <div className="flex gap-[32px] items-center text-right">
+          <img className="h-[27px] w-[30px]" src="/images/chat.svg" alt="Chat" />
+          <div className="flex gap-[14px] items-center">
+            <div className="flex flex-col text-xs">
+              <p>Marvin McKinney</p>
+              <p className="font-light">Role</p>
+            </div>
+            <img className="h-[38px] w-[38px] rounded-[6px] object-cover" src="https://s3-alpha-sig.figma.com/img/a049/55d7/a53b952704bce7d7673720dd7a763f97?Expires=1697414400&Signature=Eid9dGXhO0Zk909btCHMkecd7JdXqgX6OlSVGburaND9QM-A36Zv22hE-7C154NLTQBorqI4t8HEJeApI~9kNTkq97yJkCmv3PvwLdAZBx-Dw5SlS6mLEhoN4s67E7nAmhmRUuHw-oo2SZuSBJScinwr3juqrzpPCA2STJJ4j0Slv9dNUKxxBIMDLV8FZ14Vchuccn49zfT~ZqFL1IL72Mm6xA9PhFeFEzo74uQzjlgcpqc6OlQki3shU0UxmRRJTiLKHwnNYqNv8tGTj4yJoTmJnQqaXZxOvUhh0bio4lxUjoWGhxnRel30KPFBuwZ0srAtE0K4ncxkZ~WZDXPsWg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="Admin" />
+            <img className="h-[27px] w-[27px]" src="/images/logout.svg" alt="Logout" />
+          </div>
+        </div>
+      </nav>
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
 }
 
-
-
-export default NavBar
+export default NavBar;
