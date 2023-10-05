@@ -12,7 +12,7 @@ const PatientList = () => {
         {name: "Mohcine ghalmi", type: "Report", time: "1 : 42 PM"},
     ]
     return (
-        <Card extraStyle="w-[446px] h-[467px]">
+        <Card extraStyle="h-[467px] w-[100%]">
             <div className="grid grid-cols-6 mb-[5px]">
                 <Title givingExtraSpace="col-end-0 col-span-4">patient list</Title>
                 <div className="col-start-7 col-end-7 opacity-60 text-sm flex justify-center gap-1 items-center" >
