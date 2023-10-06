@@ -24,10 +24,10 @@ const NavBar = () => {
   // the component  :
   return (
     <div className="bg-[#2E8544]">
-      <nav className="pr-[24px] pl-[24px] bg-[#2E8544] h-[69px] flex justify-between items-center text-[#F4FFF3] font-semibold pt-[12px]">
-        <div className="flex gap-[95px] items-center h-full">
+      <nav className="pr-[24px] pl-[24px] bg-[#2E8544] h-[69px] flex justify-between items-center text-[#F4FFF3] font-semibold pt-[12px] flex-wrap">
+        <div className="flex justify-between items-center h-full w-[50%] max-w-[850px] evnavsm:flex-col evnavsm:gap-[10px]">
           <img className="h-[25px] mb-[12px]" src="/images/logo.svg" alt="LOGO" />
-          <div className="flex text-[15.34px] h-full">
+          <div className="flex text-[15.34px] h-full w-full">
             {
               navList.map((navName, index) => {
                 return (index === 0 || navList.length === index + 1) ?
@@ -44,7 +44,7 @@ const NavBar = () => {
         <div className="flex gap-[32px] items-center text-right mb-[12px]">
           <img className="h-[27px] w-[30px] cursor-pointer" src="/images/chat.svg" alt="Chat" />
           <div className="flex gap-[14px] items-center">
-            <div className="flex flex-col text-xs">
+            <div className="flex flex-col text-xs evnavmd:hidden">
               <p>Marvin McKinney</p>
               <p className="font-light">Role</p>
             </div>
