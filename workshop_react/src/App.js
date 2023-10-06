@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Views/Navbar/NavBar";
 import React from "react";
 import RegisterPatient from "./pages/registerPatient";
+import Patients from "./pages/patients";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="" element={<NavBar />} />{" "}
           <Route path="/registerPatient" element={<RegisterPatient />} />
+          <Route path="/patients" element={<Patients />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>
