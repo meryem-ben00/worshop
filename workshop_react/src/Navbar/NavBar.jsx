@@ -1,59 +1,15 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { getIndex, getTheDivStyle, getThePtagStyle } from "./HelperFunctions";
 
 const NavBar = () => {
-  // helpers :
-  function getTheDivStyle(index) {
-    return selected === index + 1
-      ? "bg-[#1E2E5C] h-full justify-center"
-      : selected === index - 1
-      ? "bg-[#1E2E5C] h-full justify-center"
-      : selected !== index
-      ? "bg-[#2E8544] h-full justify-center"
-      : "bg-[#2E8544] h-full";
-  }
 
-  function getThePtagStyle(index) {
-    return selected === index + 1
-      ? "rounded-br-lg bg-[#2E8544] h-full w-full justify-center flex p-[20px] items-center"
-      : selected === index - 1
-      ? "bg-[#2E8544] h-full w-full justify-center flex p-[20px] items-center rounded-bl-lg"
-      : selected !== index
-      ? "h-full w-full bg-[#2E8544] justify-center flex p-[20px] items-center"
-      : "h-full w-full bg-[#1E2E5C] justify-center flex pr-[40px] pl-[40px] items-center rounded-tl-lg rounded-tr-lg";
-  }
-
-  function getTheDivStyleMobile(index) {
-    return selected === index + 1
-      ? "bg-[#1E2E5C] w-full  h-full justify-center"
-      : selected === index - 1
-      ? "bg-[#1E2E5C] w-full h-full justify-center"
-      : selected !== index
-      ? "bg-[#2E8544] w-full h-full justify-center"
-      : "bg-[#2E8544] w-full h-full";
-  }
-
-  function getThePtagStyleMobile(index) {
-    return selected === index + 1
-      ? "bg-[#2E8544] h-full w-full justify-center flex p-[10px] items-center"
-      : selected === index - 1
-      ? "bg-[#2E8544] h-full w-full justify-center flex p-[10px] items-center"
-      : selected !== index
-      ? "h-full w-full bg-[#2E8544] justify-center flex p-[10px] items-center"
-      : "h-full w-full bg-[#1E2E5C] justify-center flex p-[10px] pr-[40px] pl-[40px] items-center";
-  }
+  const navList = ["", "Dashboard", "Users", "Patients", "Test", ""];
 
   const [selected, setSelect] = useState(1);
-
   const [openBur, setBpenBur] = useState(-1);
 
-  function getIndex(index) {
-    setSelect(index);
-  }
 
-  let navList = ["", "Dashboard", "Users", "Patients", "Test", ""];
-
-  // the component  :
   return (
     <div className="bg-[#2E8544]">
       <nav className="pr-[24px] pl-[24px] bg-[#2E8544] h-[69px] flex justify-between items-center text-[#F4FFF3] font-semibold pt-[12px]">
@@ -67,47 +23,28 @@ const NavBar = () => {
             className={
               openBur === false
                 ? "hidden"
-                : openBur === -1
-                ? "flex text-[15.34px] h-full w-full evnavsm:hidden"
-                : "absolute text-[15.34px] w-full h-fit flex flex-col gap-[20%] bg-[#2E8544] items-center mt-[69px] left-[100%] "
+                : `evnavsm:absolute text-[15.34px] w-full evnavsm:h-fit h-full flex evnavsm:flex-col \
+                evnavsm:gap-[20%] evnavsm:bg-[#2E8544] evnavsm:items-center evnavsm:mt-[69px] evnavsm:left-[100%]`
             }
           >
             {navList.map((navName, index) => {
               return index === 0 || navList.length === index + 1 ? (
                 <div
                   key={index}
-                  className={
-                    openBur === -1
-                      ? getTheDivStyle(index)
-                      : getTheDivStyleMobile(index)
-                  }
+                  className={getTheDivStyle(index, selected)}
                 >
-                  <p
-                    className={
-                      openBur === -1 ? getThePtagStyle(index) : "hidden"
-                    }
-                  >
+                  <p className={getThePtagStyle(index, selected) + " evnavsm:hidden"}>
                     {navName}
                   </p>
                 </div>
               ) : (
                 <NavLink
-                  to="/"
+                  to={"/" + navName.toLowerCase()}
                   key={index}
-                  onClick={() => getIndex(index)}
-                  className={
-                    openBur === -1
-                      ? getTheDivStyle(index)
-                      : getTheDivStyleMobile(index)
-                  }
+                  onClick={() => getIndex(index, setSelect)}
+                  className={getTheDivStyle(index, selected)}
                 >
-                  <p
-                    className={
-                      openBur === -1
-                        ? getThePtagStyle(index)
-                        : getThePtagStyleMobile(index)
-                    }
-                  >
+                  <p className={getThePtagStyle(index, selected)}>
                     {navName}
                   </p>
                 </NavLink>
