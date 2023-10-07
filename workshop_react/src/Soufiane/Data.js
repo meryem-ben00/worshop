@@ -2,7 +2,6 @@ import Girl from './Images/Girl.png';
 import Boy from './Images/Avatar (2).png';
 import Boy2 from './Images/Boy2.png';
 import Girl2 from './Images/Girl2.png';
-
 const data = [
   {
     name:"Brooklyn Simmons",
