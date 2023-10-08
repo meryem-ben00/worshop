@@ -16,7 +16,7 @@ function Dashboard() {
   
   return (
     <div>
-    <div className='bg-[#1E2E5C] gap-[30px] px-[30px] py-[30px] grid grid-rows-12 mt-12 h-[960px]'>
+    <div className='bg-[#1E2E5C] gap-[30px] px-[30px] py-[30px] grid grid-rows-12 h-[960px]'>
         <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-[50px] h-[50px] mb-[60px] row-span-2'>
             <div className='bg-white rounded-[6px]'>
               <PieChart />
