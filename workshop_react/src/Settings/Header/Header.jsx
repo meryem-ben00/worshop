@@ -16,10 +16,10 @@ function Header() {
               <NavLink to="/settings" className={location.pathname === '/settings' ? 'text-[#2E8544]' : ''}>Account Setting</NavLink>
             </li>
             <li>
-              <NavLink to="/password" className={location.pathname === '/password' ? 'text-[#2E8544]' : ''}>Password</NavLink>
+              <NavLink to="/settings/password" className={location.pathname === '/settings/password' ? 'text-[#2E8544]' : ''}>Password</NavLink>
             </li>
             <li>
-              <NavLink to="/email" className={location.pathname === '/email' ? 'text-[#2E8544]' : ''}>Email</NavLink>
+              <NavLink to="/settings/email" className={location.pathname === '/settings/email' ? 'text-[#2E8544]' : ''}>Email</NavLink>
             </li>
           </ul>
         </nav>

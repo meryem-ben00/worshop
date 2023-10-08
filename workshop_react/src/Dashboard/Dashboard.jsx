@@ -1,12 +1,8 @@
 import React from 'react'
-import { Line } from 'react-chartjs-2'
-import Chart from 'chart.js/auto';
-import Visitor from './Visitors/Visitor'
 import AreaChart from './Visitors/area/AreaChart'
 import LineChart from './Visitors/line/LineChart'
 import BarChart from './Visitors/bar/BarChart'
 import PieChart from './Visitors/pie/PieChart'
-import NavBar from '../Views/Navbar/NavBar'
 import PatientAreaChart from './Patient/PatientAreaChart';
 import PatientOverviewChart from './Patient/PatientOverviewChart';
 import ActivityChart from './Patient/ActivityChart';
@@ -17,7 +13,7 @@ function Dashboard() {
   return (
     <div>
     <div className='bg-[#1E2E5C] gap-[30px] px-[30px] py-[30px] grid grid-rows-12 h-[960px]'>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-[50px] h-[50px] mb-[60px] row-span-2'>
+        <div className='grid grid-cols-4 gap-[50px] h-[50px] mb-[60px] row-span-2'>
             <div className='bg-white rounded-[6px]'>
               <PieChart />
             </div>
@@ -31,7 +27,7 @@ function Dashboard() {
                 <AreaChart />
             </div>
         </div>
-        <div className='grid lg:grid-cols-12 grid-cols-1 gap-[30px] h-[350px] row-span-5'>
+        <div className='grid grid-cols-12 grid-cols-1 gap-[30px] h-[350px] row-span-5'>
           <div className='bg-white div1 col-span-5 overflow-auto rounded-[6px]'><PatientAreaChart /></div>
           <div className='bg-white div2 col-span-7 overflow-auto rounded-[6px]'><PatientOverviewChart /></div>
         </div>
