@@ -1,7 +1,7 @@
 import React from "react";
 import arrowRight from "../../assets/icons/Right-2.png";
 
-const userPatients = ({ data }) => {
+const Patients = ({ data }) => {
   return (
     <div className="py-8">
       <table className="w-full ">
@@ -61,4 +61,4 @@ const userPatients = ({ data }) => {
   );
 };
 
-export default userPatients;
+export default Patients;

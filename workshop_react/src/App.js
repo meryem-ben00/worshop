@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Views/Navbar/NavBar";
 import React from "react";
-import RegisterPatient from "./pages/registerPatient";
+import RegisterPatient from "./pages/RegisterPatient";
 import Patients from "./pages/patients";
 
 function App() {
