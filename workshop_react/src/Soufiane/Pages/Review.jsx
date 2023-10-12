@@ -41,7 +41,7 @@ const Review = () => {
                   </div>
                   <div className=' w-[100%] relative '>
                       <p className='text-[#5F8D4E] mb-2'>Date of birth</p>
-                      <input className='border p-5 rounded w-full h-[45px] mb-8 bg-transparent border border-[#C9C9C9] text-[15px]' type="text" value={"Select your date of birth"}/>
+                      <input className='border p-5 rounded w-full h-[45px] mb-8 bg-transparent border border-[#C9C9C9] text-[15px]' type="text" value={"Select your date of birth "}/>
                       <img className='absolute right-2.5 bottom-[47px]' src={Calender} alt="" />
                   </div>
               </div>

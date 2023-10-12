@@ -4,8 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    screens: {
+      'evnavmd': { 'max': '950px' },
+      'evnavsm': { 'max': '815px' },
+      'evmd': { 'max': '1300px' },
+      'evsm': { 'max': '810px' },
+    },
+    extend: {
+
+    },
   },
   plugins: [],
 }
-
