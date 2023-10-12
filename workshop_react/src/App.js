@@ -5,6 +5,8 @@ import Users from './Soufiane/Pages/ListUsers';
 import List from './Soufiane/Pages/ListDoctors';
 import AddNewUser from './Soufiane/Pages/AddNewUser';
 import Details from './Soufiane/Pages/EnterDetails';
+import Services from './Soufiane/Pages/Services';
+import Review from './Soufiane/Pages/Review';
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: "/details",
     element: <Details />,
+  },
+  {
+    path: "/services",
+    element: <Services />,
+  },
+  {
+    path: "/review",
+    element: <Review />,
   },
 ]);
 function App() {
