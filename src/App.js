@@ -10,33 +10,6 @@ import Details from './Soufiane/Pages/EnterDetails';
 import Services from './Soufiane/Pages/Services';
 import Review from './Soufiane/Pages/Review';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <List data={data}/>,
-    errorElement: <h1>Sorry this page is not exist...</h1>,
-  },
-  {
-    path: "/users",
-    element: <Users data = {data}/>,
-  },
-  {
-    path: "/add",
-    element: <AddNewUser />,
-  },
-  {
-    path: "/details",
-    element: <Details />,
-  },
-  {
-    path: "/services",
-    element: <Services />,
-  },
-  {
-    path: "/review",
-    element: <Review />,
-  },
-]);
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
