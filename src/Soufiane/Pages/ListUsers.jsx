@@ -2,14 +2,14 @@ import Comp1 from '../Components/1-Comp1';
 import Doctors from '../Components/2-Doctors';
 import Pagination from '../Components/3-Pagination';
 
-const List = ({data = []}) => {
+const ListUsers = ({data = []}) => {
   return (
-    <div className='container mx-auto  mt-20 font-Poppins '>
-      <Comp1 children={"Doctors"}/>
-      <Doctors data ={data} />
+    <div className='container mx-auto  mt-2 '>
+      <Comp1 children={"Users"}/>
+      <Doctors data ={data} isUser />
       <Pagination/>
     </div>
   );
 }
 
-export default List;
+export default ListUsers;

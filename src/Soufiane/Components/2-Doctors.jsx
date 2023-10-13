@@ -2,7 +2,7 @@ import React from 'react';
 import arrowRight from '../Images/Right-2.png';
 const Doctors = ({data , isUser = false}) => {
   return (
-    <div className='py-8 overflow-x w-[1536px]'>
+    <div className='py-8 overflow-x w-[1536px] mx-auto'>
         <table className='w-full'>
         <thead>
             <tr className='w-full rounded-md bg-[#FAFAFA] text-[#B5B5C3]'>

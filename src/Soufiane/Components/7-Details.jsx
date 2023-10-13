@@ -3,7 +3,7 @@ import React from 'react';
 const Details = () => {
   return (
     <div >
-      <div className='w-3/5  mx-auto mt-[80px] text-white flex font-[Poppins]   '>
+      <div className='w-[1200px] mx-auto mt-[80px] text-white flex font-[Poppins]   '>
           <div className='b w-[50%]'>
               <p className='mb-[60px] font-semibold text-[23px]'>Details</p>
               <div >

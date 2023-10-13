@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Comp1 = ({children}) => {
   return (
-    <div className='w-1241 flex items-center text-white justify-between' >
+    <div className='w-[1536px] mt-4 mx-auto flex items-center text-white justify-between' >
         <div>
           <h3>List of {children}</h3>
           <p>345 available {children}</p>

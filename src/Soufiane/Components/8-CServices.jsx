@@ -4,7 +4,7 @@ import Polygon from '../Images/Polygon 1.png';
 const CServices = () => {
   return (
 
-    <div className=' w-3/5 	mx-auto mt-[80px] font-[Poppins] text-white'>
+    <div className=' w-[1200px] 	mx-auto mt-[80px] font-[Poppins] text-white'>
       <p className='mb-[60px]'>Services</p>
       <div className='flex gap-20'>
           <div className=''>
