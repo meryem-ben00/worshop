@@ -8,8 +8,8 @@ const Review = () => {
   return (
     <div>
       <Steps border4={"border-lime-800"}  text4={"text-[#5F8D4E]"} />
-      <div className='relative h-[1500px]'>
-          <div className=' w-3/5 p-[20px]	mx-auto mt-[80px] font-[Poppins] text-white border-[1px]'>
+      <div className='relative  h-[1500px]'>
+          <div className=' w-[1200px] p-[20px]	mx-auto mt-[80px] font-[Poppins] text-white border-[1px]'>
           <p className='mb-[60px]'>Basic information</p>
           <div className='flex gap-20'>
               <div className=''>
@@ -48,7 +48,7 @@ const Review = () => {
           </div>
           </div>
           
-          <div className='w-3/5 p-[20px] mx-auto border-[1px] text-white flex font-[Poppins]   '>
+          <div className='w-[1200px] p-[20px] mx-auto border-[1px] text-white flex font-[Poppins]   '>
               <div className='b w-[50%]'>
                   <p className='mb-[60px] font-semibold text-[23px]'>Details</p>
                   <div >
@@ -68,7 +68,7 @@ const Review = () => {
               </div>
           </div>
           
-          <div className=' w-3/5 p-[20px] 	mx-auto border-[1px] font-[Poppins] text-white'>
+          <div className=' w-[1200px] p-[20px] 	mx-auto border-[1px] font-[Poppins] text-white'>
           <p className='mb-[60px]'>Services</p>
           <div className='flex gap-20'>
               <div className=''>
@@ -99,7 +99,7 @@ const Review = () => {
           </div>
         
           <div >
-            <Link to={"/"} className=' text-[#FFFFFF] flex justify-center items-center bg-[#5F8D4E] w-[133px] h-[52px]  absolute right-[387px] bottom-[50px] rounded font-semibold'><p>Done</p></Link>
+            <Link to={"/patients"} className=' text-[#FFFFFF] flex justify-center items-center bg-[#5F8D4E] w-[133px] h-[52px]  absolute right-[50px] bottom-[50px] rounded font-semibold'><p>Done</p></Link>
           </div>
       </div>
     </div>
