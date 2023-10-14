@@ -7,7 +7,7 @@ import StatistiqueCard from "./Components/StatistiqueCard/StatistiqueCard";
 const Profile = () => {
 
     return (
-        <div className="grid grid-cols-3 evmd:grid-cols-2 evsm:grid-cols-1 auto-cols-max gap-4 max-w-[1440px] items-center justify-items-center">
+        <div className="grid grid-cols-3 evmd:grid-cols-2 evsm:grid-cols-1 auto-cols-max gap-4 items-center justify-items-center">
             <div>
                 <h1 className="capitalize text-white font-semibold text-[33px] mb-[27px]"><span className="text-[#2E8544]">Dr.</span>Brooklyn Simmons</h1>
                 <h3 className="text-white font-medium text-[22px]">Visits for Today</h3>
