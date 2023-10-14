@@ -8,6 +8,7 @@ import AddNewUser from './Soufiane/Pages/AddNewUser';
 import Details from './Soufiane/Pages/EnterDetails';
 import Services from './Soufiane/Pages/Services';
 import Review from './Soufiane/Pages/Review';
+import Profile from './DoctorProfile/profile';
 
 function App() {
   const router = createBrowserRouter(
@@ -20,7 +21,7 @@ function App() {
         <Route path='details' element={<Details />}></Route>
         <Route path='services' element={<Services />}></Route>
         <Route path='review' element={<Review />}></Route>
-        <Route path='users' element={<h1>users</h1>}></Route>
+        <Route path='users' element={<Profile />}></Route>
         <Route path='*' element={<h1>404</h1>}></Route>
       </Route>
     )
