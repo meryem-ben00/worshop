@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBar from "../../Views/Navbar/NavBar";
 import Arrow from "../../assets/icons/Arrow";
 import "./registerPatient.css";
 
 const RegisterPatient = () => {
   return (
     <>
-      <NavBar />
       <div className="bg-bgColor flex justify-center min-h-full mx-5">
-        <div className="max-rp:mx-12 mx-48 mt-10 mb-10 w-full flex flex-col gap-4 max-w-[1077px]">
+        <div className="maxrp:mx-12 mx-48 mt-10 mb-10 w-full flex flex-col gap-4 max-w-[1077px]">
           <div className="relative mb-7">
             <Link to={"/"} className="absolute right-0">
               <Arrow />
@@ -26,12 +24,12 @@ const RegisterPatient = () => {
 
           <form
             onSubmit={console.log("Test")}
-            className="flex flex-col gap-6 max-rp:gap-12"
+            className="flex flex-col gap-6 maxrp:gap-12"
           >
             {" "}
             {/** add the onSubmit function */}
-            <div className="flex max-rp:flex-col gap-12 justify-center items-center ">
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+            <div className="flex maxrp:flex-col gap-12 justify-center items-center ">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="name"
                   className="text-white text-2xl font-semibold ml-4"
@@ -41,10 +39,10 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="name"
-                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg betweenrp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="date"
                   className="text-white text-2xl font-semibold ml-4"
@@ -54,12 +52,12 @@ const RegisterPatient = () => {
                 <input
                   type="datetime-local"
                   name="date"
-                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg betweenrp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
-            <div className="flex max-rp:flex-col gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+            <div className="flex maxrp:flex-col gap-12 justify-center items-center">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="age"
                   className="text-white text-2xl font-semibold ml-4"
@@ -69,10 +67,10 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="age"
-                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg betweenrp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex flex-col px-7 gap-3 w-full max-rp:w-fit line">
+              <div className="flex flex-col px-7 gap-3 w-full maxrp:w-fit line">
                 <label
                   htmlFor="gender "
                   className="text-white text-2xl font-semibold ml-4"
@@ -110,7 +108,7 @@ const RegisterPatient = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="bloodGroup"
                   className="text-white text-2xl font-semibold ml-4"
@@ -120,12 +118,12 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="bloodGroup"
-                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg betweenrp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
             <div className="flex gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="houseAddress"
                   className="text-white text-2xl font-semibold ml-4"
@@ -136,12 +134,12 @@ const RegisterPatient = () => {
                   type="text"
                   name="houseAddress"
                   placeholder="name,house,city,..."
-                  className="inputForm max-rp:max-w-lg between-rp:w-[32rem] houseAddressInput py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light w-full"
+                  className="inputForm maxrp:max-w-lg betweenrp:w-[32rem] houseAddressInput py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light w-full"
                 />
               </div>
             </div>
-            <div className="flex max-rp:flex-col gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+            <div className="flex maxrp:flex-col gap-12 justify-center items-center">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="phone"
                   className="text-white text-2xl font-semibold ml-4"
@@ -151,10 +149,10 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="phone"
-                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg betweenrp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="dateBirth"
                   className="text-white text-2xl font-semibold ml-4"
@@ -164,12 +162,12 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="dateBirth"
-                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg betweenrp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
             </div>
-            <div className="flex max-rp:flex-col gap-12 justify-center items-center">
-              <div className="flex flex-col gap-3 w-full between-rp:w-fit">
+            <div className="flex maxrp:flex-col gap-12 justify-center items-center">
+              <div className="flex flex-col gap-3 w-full betweenrp:w-fit">
                 <label
                   htmlFor="departement"
                   className="text-white text-2xl font-semibold ml-4"
@@ -179,7 +177,7 @@ const RegisterPatient = () => {
                 <input
                   type="text"
                   name="departement"
-                  className="inputForm max-w-lg between-rp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
+                  className="inputForm max-w-lg betweenrp:w-[32rem] py-2 pl-5 pr-5 rounded-3xl text-white text-lg font-light"
                 />
               </div>
               <div className="flex justify-center items-center self-end w-full mt-3">

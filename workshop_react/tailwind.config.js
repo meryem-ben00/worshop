@@ -7,8 +7,8 @@ module.exports = {
       evnavsm: { max: "815px" },
       evmd: { max: "1300px" },
       evsm: { max: "810px" },
-      "max-rp": { max: "900px" }, // custom media query for registerPatient.
-      "between-rp": { max: "900px", min: "650px" },
+      maxrp: { max: "900px" }, // custom media query for registerPatient.
+      betweenrp: { max: "900px", min: "650px" },
     },
     extend: {
       colors: {

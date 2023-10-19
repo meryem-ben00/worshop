@@ -3,12 +3,10 @@ import { NavLink, Outlet } from "react-router-dom";
 import { getIndex, getTheDivStyle, getThePtagStyle } from "./HelperFunctions";
 
 const NavBar = () => {
-
   const navList = ["", "Dashboard", "Users", "Patients", "Test", ""];
 
   const [selected, setSelect] = useState(1);
   const [openBur, setBpenBur] = useState(-1);
-
 
   return (
     <div className="bg-[#2E8544]">
@@ -29,11 +27,12 @@ const NavBar = () => {
           >
             {navList.map((navName, index) => {
               return index === 0 || navList.length === index + 1 ? (
-                <div
-                  key={index}
-                  className={getTheDivStyle(index, selected)}
-                >
-                  <p className={getThePtagStyle(index, selected) + " evnavsm:hidden"}>
+                <div key={index} className={getTheDivStyle(index, selected)}>
+                  <p
+                    className={
+                      getThePtagStyle(index, selected) + " evnavsm:hidden"
+                    }
+                  >
                     {navName}
                   </p>
                 </div>
@@ -44,9 +43,7 @@ const NavBar = () => {
                   onClick={() => getIndex(index, setSelect)}
                   className={getTheDivStyle(index, selected)}
                 >
-                  <p className={getThePtagStyle(index, selected)}>
-                    {navName}
-                  </p>
+                  <p className={getThePtagStyle(index, selected)}>{navName}</p>
                 </NavLink>
               );
             })}
