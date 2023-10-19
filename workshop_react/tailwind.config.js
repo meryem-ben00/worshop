@@ -3,6 +3,19 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
+<<<<<<< HEAD
+      'evnavmd': { 'max': '950px' },
+      'evnavsm': { 'max': '815px' },
+      'evmd': { 'max': '1300px' },
+      'evsm': { 'max': '810px' },
+    },
+    extend: {
+
+    },
+  },
+  plugins: [],
+}
+=======
       evnavmd: { max: "950px" },
       evnavsm: { max: "815px" },
       evmd: { max: "1300px" },
@@ -18,3 +31,4 @@ module.exports = {
   },
   plugins: [],
 };
+>>>>>>> main
