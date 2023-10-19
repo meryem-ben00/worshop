@@ -8,7 +8,7 @@ import "./Patients.css";
 const RegisterPatient = () => {
   return (
     <>
-      <div className="container mx-auto mt-10 mb-5">
+      <div className="mt-10 mb-5">
         <HeaderPatients />
         <Patients data={data} />
         <Pagination />

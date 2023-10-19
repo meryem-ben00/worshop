@@ -24,7 +24,7 @@ function App() {
       <Route path="/" element={<NavBar />}>
         <Route path="dashboard" element={<h1>dashboard</h1>}></Route>
         <Route path="test" element={<h1>test</h1>}></Route>
-        <Route path="patients" element={<List data={data} />}></Route>
+        <Route path="doctors" element={<List data={data} />}></Route>
         <Route path="add" element={<AddNewUser />}></Route>
         <Route path="details" element={<Details />}></Route>
         <Route path="services" element={<Services />}></Route>

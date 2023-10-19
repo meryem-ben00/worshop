@@ -58,16 +58,16 @@ const NavBar = () => {
           <div className="flex gap-[14px] evnavsm:gap-[10px]  items-center">
             <div className="flex flex-col text-xs evnavmd:hidden">
               <NavLink to={"/settings"}>
-              <p>Marvin McKinney</p>
-              <p className="font-light">Role</p>
+                <p>Marvin McKinney</p>
+                <p className="font-light">Role</p>
               </NavLink>
             </div>
             <NavLink to={"/settings"}>
-            <img
-              className="h-[38px] w-[38px] rounded-[6px] object-cover cursor-pointer"
-              src="https://s3-alpha-sig.figma.com/img/a049/55d7/a53b952704bce7d7673720dd7a763f97?Expires=1697414400&Signature=Eid9dGXhO0Zk909btCHMkecd7JdXqgX6OlSVGburaND9QM-A36Zv22hE-7C154NLTQBorqI4t8HEJeApI~9kNTkq97yJkCmv3PvwLdAZBx-Dw5SlS6mLEhoN4s67E7nAmhmRUuHw-oo2SZuSBJScinwr3juqrzpPCA2STJJ4j0Slv9dNUKxxBIMDLV8FZ14Vchuccn49zfT~ZqFL1IL72Mm6xA9PhFeFEzo74uQzjlgcpqc6OlQki3shU0UxmRRJTiLKHwnNYqNv8tGTj4yJoTmJnQqaXZxOvUhh0bio4lxUjoWGhxnRel30KPFBuwZ0srAtE0K4ncxkZ~WZDXPsWg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-              alt="Admin"
-            />
+              <img
+                className="h-[38px] w-[38px] rounded-[6px] object-cover cursor-pointer"
+                src="https://s3-alpha-sig.figma.com/img/a049/55d7/a53b952704bce7d7673720dd7a763f97?Expires=1697414400&Signature=Eid9dGXhO0Zk909btCHMkecd7JdXqgX6OlSVGburaND9QM-A36Zv22hE-7C154NLTQBorqI4t8HEJeApI~9kNTkq97yJkCmv3PvwLdAZBx-Dw5SlS6mLEhoN4s67E7nAmhmRUuHw-oo2SZuSBJScinwr3juqrzpPCA2STJJ4j0Slv9dNUKxxBIMDLV8FZ14Vchuccn49zfT~ZqFL1IL72Mm6xA9PhFeFEzo74uQzjlgcpqc6OlQki3shU0UxmRRJTiLKHwnNYqNv8tGTj4yJoTmJnQqaXZxOvUhh0bio4lxUjoWGhxnRel30KPFBuwZ0srAtE0K4ncxkZ~WZDXPsWg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="Admin"
+              />
             </NavLink>
             <div
               className="h-[24px] w-[24px] flex-col gap-[5px] hidden evnavsm:flex"
