@@ -3,6 +3,7 @@ import NavBar from "./Views/Navbar/NavBar";
 import React from "react";
 import RegisterPatient from "./pages/RegisterPatient";
 import Patients from "./pages/Patients";
+import Chat from "./pages/Chat";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="" element={<NavBar />} />{" "}
           <Route path="/registerPatient" element={<RegisterPatient />} />
           <Route path="/patients" element={<Patients />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>
