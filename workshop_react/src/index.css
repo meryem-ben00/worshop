@@ -1,35 +1,22 @@
-@tailwind base;
+
 
 body {
   margin: 0;
-<<<<<<< HEAD
   /* padding: 30px; */
-=======
->>>>>>> main
   background-color: #1E2E5C;
   font-family: poppins;
 }
 
-<<<<<<< HEAD
 /* html, body
 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
 } */
-=======
-main {
-  padding: 30px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
->>>>>>> main
 
 
 @layer base {
   body {
-    @apply bg-[#1E2E5C];
     font-family: 'Poppins', sans-serif;
   }
 }
