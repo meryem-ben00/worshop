@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import React from 'react';
-import Dashboard from './Dashboard/Dashboard';
-import AccountSetting from './Settings/Content/AccountSetting';
-import Password from './Settings/Content/Password';
-import Email from './Settings/Content/Email';
-import Test from './Test/Content/Test';
-import NavBar from './Navbar/NavBar';
-=======
 import {
   Route,
   RouterProvider,
@@ -27,22 +17,10 @@ import Profile from "./DoctorProfile/profile";
 import RegisterPatient from "./pages/RegisterPatient";
 import Patients from "./pages/Patients";
 import Chat from "./pages/Chat";
->>>>>>> main
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-<<<<<<< HEAD
-      <Route path='/' element={<NavBar />} >
-        <Route path='dashboard' element={<Dashboard />}></Route>
-        <Route path='test' element={<Test />}></Route>
-        <Route path='patients' element={<h1>patients</h1>}></Route>
-        <Route path='users' element={<h1>users</h1>}></Route>
-        <Route path='settings' element={<AccountSetting />}></Route>
-        <Route path='settings/password' element={<Password />}></Route>
-        <Route path='settings/email' element={<Email />}></Route>
-        <Route path='*' element={<h1>404</h1>}></Route>
-=======
       <Route path="/" element={<NavBar />}>
         <Route path="dashboard" element={<h1>dashboard</h1>}></Route>
         <Route path="test" element={<h1>test</h1>}></Route>
@@ -56,19 +34,11 @@ function App() {
         <Route path="patients" element={<Patients />} />
         <Route path="chat" element={<Chat />} />
         <Route path="*" element={<h1>404</h1>}></Route>
->>>>>>> main
       </Route>
     )
   );
 
-<<<<<<< HEAD
-  return (
-    <RouterProvider router={router} />
-  )
-
-=======
   return <RouterProvider router={router} />;
->>>>>>> main
 }
 
 export default App;

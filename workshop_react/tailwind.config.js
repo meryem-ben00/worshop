@@ -3,24 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-<<<<<<< HEAD
-      'evnavmd': { 'max': '950px' },
-      'evnavsm': { 'max': '815px' },
-      'evmd': { 'max': '1300px' },
-      'evsm': { 'max': '810px' },
-    },
-    extend: {
-
-    },
-  },
-  plugins: [],
-}
-=======
       evnavmd: { max: "950px" },
       evnavsm: { max: "815px" },
       evmd: { max: "1300px" },
       evsm: { max: "810px" },
-      maxrp: { max: "900px" }, // custom media query for registerPatient.
+      maxrp: { max: "900px" },
       betweenrp: { max: "900px", min: "650px" },
     },
     extend: {
@@ -31,4 +18,3 @@ module.exports = {
   },
   plugins: [],
 };
->>>>>>> main
