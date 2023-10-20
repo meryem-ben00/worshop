@@ -1,9 +1,7 @@
-// import { useState } from "react";
 import { useState } from "react";
 import Card from "../Components/Card/card"
 import Title from "../Components/Title/title"
 import { DayPicker } from 'react-day-picker';
-// import { format } from 'date-fns';
 import 'react-day-picker/dist/style.css';
 
 const Calendar = () => {
@@ -24,13 +22,8 @@ const Calendar = () => {
     setSelectedDate(new Date(date));
   };
   const bookedDays = [new Date(2023, 8, 25), new Date(2023, 8, 26)];
-
-  // const [booked, setBooked] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
 
-  // const handleDayClick = (day, modifiers) => {
-  //     // setBooked(day && modifiers.booked);
-  // };
 
   const CustomDayCell = ({ date, displayMonth, selected }) => {
     const isReserved = bookedDays.some((bookedDays) =>

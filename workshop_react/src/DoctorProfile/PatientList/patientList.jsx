@@ -1,15 +1,14 @@
-// import { useState } from "react";
 import Card from "../Components/Card/card";
 import Title from "../Components/Title/title";
 import PatientRow from "./PatientRow/patientRow"
 const PatientList = () => {
-    
+
     const date = 'Today';
     const PatientListObject = [
-        {name: "Saad AKLLAM", type: "Weekly Visit", time: "1 : 37 PM"}, 
-        {name: "Amy Dunham", type: "Routine Checkup", time: "1 : 37 PM"}, 
-        {name: "Saad AKLLAM", type: "Weekly Visit", time: "1 : 37 PM"},
-        {name: "Mohcine ghalmi", type: "Report", time: "1 : 42 PM"},
+        { name: "Saad AKLLAM", type: "Weekly Visit", time: "1 : 37 PM" },
+        { name: "Amy Dunham", type: "Routine Checkup", time: "1 : 37 PM" },
+        { name: "Saad AKLLAM", type: "Weekly Visit", time: "1 : 37 PM" },
+        { name: "Mohcine ghalmi", type: "Report", time: "1 : 42 PM" },
     ]
     return (
         <Card extraStyle="h-[467px] w-[100%]">
@@ -22,13 +21,12 @@ const PatientList = () => {
             </div>
             <div>
                 {
-                     PatientListObject.map((e, index) =>
-                      {
-                          return <PatientRow key={index}
-                                    name={e.name}
-                                    time={e.time}
-                                    type={e.type}/>
-                      })
+                    PatientListObject.map((e, index) => {
+                        return <PatientRow key={index}
+                            name={e.name}
+                            time={e.time}
+                            type={e.type} />
+                    })
                 }
             </div>
             <div className="grid grid-cols-6 mt-7">

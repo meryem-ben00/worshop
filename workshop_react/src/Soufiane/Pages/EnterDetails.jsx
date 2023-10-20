@@ -4,12 +4,10 @@ import Steps from "../Components/4-Steps";
 import Button from "../Components/6-BtnNextStep";
 const EnterDetails = () => {
   return (
-    <div className="oldMain">
-      <div>
-        <Steps border2={"border-lime-800"} text2={"text-[#5F8D4E]"} />
-        <Details />
-        <Button direction={"/services"} />
-      </div>
+    <div>
+      <Steps border2={"border-lime-800"} text2={"text-[#5F8D4E]"} />
+      <Details />
+      <Button direction={"/services"} />
     </div>
   );
 };

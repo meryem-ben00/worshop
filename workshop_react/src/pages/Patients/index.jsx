@@ -7,13 +7,13 @@ import "./Patients.css";
 
 const RegisterPatient = () => {
   return (
-    <>
+    <div className="w-[100%]">
       <div className="mt-10 mb-5">
         <HeaderPatients />
         <Patients data={data} />
         <Pagination />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,8 +4,8 @@ import Pagination from "../Components/3-Pagination";
 
 const List = ({ data = [] }) => {
   return (
-    <div className="oldMain">
-      <div className="container mx-auto font-Poppins ">
+    <div className="w-[100%] flex">
+      <div className="font-Poppins w-[100%] self-start">
         <Comp1 children={"Doctors"} />
         <Doctors data={data} />
         <Pagination />

@@ -4,12 +4,10 @@ import Steps from "../Components/4-Steps";
 import BtnNextStep from "../Components/6-BtnNextStep";
 const Services = () => {
   return (
-    <div className="oldMain">
-      <div>
-        <Steps border3={"border-lime-800"} text3={"text-[#5F8D4E]"} />
-        <CServices />
-        <BtnNextStep direction={"/review"} />
-      </div>
+    <div>
+      <Steps border3={"border-lime-800"} text3={"text-[#5F8D4E]"} />
+      <CServices />
+      <BtnNextStep direction={"/review"} />
     </div>
   );
 };

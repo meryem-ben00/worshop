@@ -17,11 +17,16 @@ import Profile from "./DoctorProfile/profile";
 import RegisterPatient from "./pages/RegisterPatient";
 import Patients from "./pages/Patients";
 import Chat from "./pages/Chat";
+import Login from "./login/login";
+
+
 
 function App() {
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<NavBar />}>
+        <Route path="login" element={<Login />} />
         <Route path="dashboard" element={<h1>dashboard</h1>}></Route>
         <Route path="test" element={<h1>test</h1>}></Route>
         <Route path="doctors" element={<List data={data} />}></Route>
@@ -37,6 +42,7 @@ function App() {
       </Route>
     )
   );
+
 
   return <RouterProvider router={router} />;
 }
