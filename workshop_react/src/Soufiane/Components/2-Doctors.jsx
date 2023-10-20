@@ -16,9 +16,9 @@ const Doctors = ({data , isUser = false}) => {
             </tr>
         </thead>
         <tbody className='text-center'>
-              {data.map((item) => {
+              {data.map((item, index) => {
                 return(
-              <tr className='text-[#FFFFFF]'>
+              <tr className='text-[#FFFFFF]' key={index}>
                 <td className='py-4 flex items-center  '>
                   <img className='pr-5 ' src={item.image} alt='' />
                   <div className="flex flex-col items-start">
