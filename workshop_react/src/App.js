@@ -18,6 +18,7 @@ import RegisterPatient from "./pages/RegisterPatient";
 import Patients from "./pages/Patients";
 import Chat from "./pages/Chat";
 import Login from "./login/login";
+import Test from "./Test/Content/Test";
 
 
 
@@ -28,7 +29,7 @@ function App() {
       <Route path="/" element={<NavBar />}>
         <Route path="login" element={<Login />} />
         <Route path="dashboard" element={<h1>dashboard</h1>}></Route>
-        <Route path="test" element={<h1>test</h1>}></Route>
+        <Route path="test" element={<Test />}></Route>
         <Route path="doctors" element={<List data={data} />}></Route>
         <Route path="add" element={<AddNewUser />}></Route>
         <Route path="details" element={<Details />}></Route>

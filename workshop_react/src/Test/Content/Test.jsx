@@ -6,7 +6,7 @@ import { faBorderNone, faXmark, faGripVertical, faCirclePlus } from '@fortawesom
 
 function Test() {
   return (
-    <div className='bg-[#1E2E5C] h-[150vh]'>
+    <div className='bg-[#1E2E5C] h-[150vh] w-[100%]'>
         <HeaderTest />
         <div className='ml-[18%] mt-[25px] w-[70%]'>
             <div className='grid grid-cols-1 gap-[20px]'>

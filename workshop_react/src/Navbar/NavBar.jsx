@@ -54,11 +54,14 @@ const NavBar = () => {
             </div>
           </div>
           <div className="flex gap-[32px] evnavsm:gap-[10px] items-center text-right mb-[12px]">
+              <NavLink to={"/chat"}>
+              
             <img
               className="h-[27px] w-[30px] cursor-pointer"
               src="/images/chat.svg"
               alt="Chat"
             />
+              </NavLink>
             <div className="flex gap-[14px] evnavsm:gap-[10px]  items-center">
               <div className="flex flex-col text-xs evnavmd:hidden">
                 <NavLink to={"/settings"}>

@@ -49,7 +49,7 @@ const ConversationBox = () => {
         <div className="flex flex-col gap-2 mt-2">
           {/* Start Conversation Card */}
           <div className="flex items-center justify-between conversationCard px-[14px] py-4 rounded-lg bg-white">
-            <div class="flex items-center justify-between gap-[18px]">
+            <div className="flex items-center justify-between gap-[18px]">
               <div className="w-10 h-10 relative">
                 <img className="" src={DefaultImage} alt="defaultImage" />
                 <div className="flex absolute bottom-0 right-0 rounded-full bg-primary-main bg-white p-[2px]">
@@ -85,7 +85,7 @@ const ConversationBox = () => {
 
           {/* Start Conversation Card */}
           <div className="flex items-center justify-between px-[14px] py-4 rounded-lg bg-white">
-            <div class="flex items-center justify-between gap-[18px]">
+            <div className="flex items-center justify-between gap-[18px]">
               <div className="w-10 h-10 relative">
                 <img className="" src={DefaultImage} alt="defaultImage" />
               </div>
@@ -118,7 +118,7 @@ const ConversationBox = () => {
 
           {/* Start Conversation Card */}
           <div className="flex items-center justify-between px-[14px] py-4 rounded-lg bg-white">
-            <div class="flex items-center justify-between gap-[18px]">
+            <div className="flex items-center justify-between gap-[18px]">
               <div className="w-10 h-10 relative">
                 <img className="" src={DefaultImage} alt="defaultImage" />
                 <div className="flex absolute bottom-0 right-0 rounded-full bg-primary-main bg-white p-[2px]">
@@ -154,7 +154,7 @@ const ConversationBox = () => {
 
           {/* Start Conversation Card */}
           <div className="flex items-center justify-between px-[14px] py-4 rounded-lg bg-white">
-            <div class="flex items-center justify-between gap-[18px]">
+            <div className="flex items-center justify-between gap-[18px]">
               <div className="w-10 h-10 relative">
                 <img className="" src={DefaultImage} alt="defaultImage" />
               </div>
@@ -187,7 +187,7 @@ const ConversationBox = () => {
 
           {/* Start Conversation Card */}
           <div className="flex items-center justify-between px-[14px] py-4 rounded-lg bg-white">
-            <div class="flex items-center justify-between gap-[18px]">
+            <div className="flex items-center justify-between gap-[18px]">
               <div className="w-10 h-10 relative">
                 <img className="" src={DefaultImage} alt="defaultImage" />
               </div>
@@ -220,7 +220,7 @@ const ConversationBox = () => {
 
           {/* Start Conversation Card */}
           <div className="flex items-center justify-between px-[14px] py-4 rounded-lg bg-white">
-            <div class="flex items-center justify-between gap-[18px]">
+            <div className="flex items-center justify-between gap-[18px]">
               <div className="w-10 h-10 relative">
                 <img className="" src={DefaultImage} alt="defaultImage" />
                 <div className="flex absolute bottom-0 right-0 rounded-full bg-primary-main bg-white p-[2px]">
