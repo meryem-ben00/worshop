@@ -17,20 +17,18 @@ import RegisterPatient from "./pages/RegisterPatient";
 import Patients from "./pages/Patients";
 import Chat from "./pages/Chat";
 import Login from "./login/login";
-import AccountSetting from './Settings/Content/AccountSetting';
-import Password from './Settings/Content/Password';
-import Email from './Settings/Content/Email';
-
-
+import AccountSetting from "./Settings/Content/AccountSetting";
+import Password from "./Settings/Content/Password";
+import Email from "./Settings/Content/Email";
+import Test from "./Test/Content/Test";
 
 function App() {
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<NavBar />}>
         <Route path="login" element={<Login />} />
         <Route path="dashboard" element={<h1>dashboard</h1>}></Route>
-        <Route path="test" element={<h1>test</h1>}></Route>
+        <Route path="test" element={<Test />}></Route>
         <Route path="doctors" element={<List data={data} />}></Route>
         <Route path="add" element={<AddNewUser />}></Route>
         <Route path="details" element={<Details />}></Route>
@@ -40,14 +38,13 @@ function App() {
         <Route path="registerPatient" element={<RegisterPatient />} />
         <Route path="patients" element={<Patients />} />
         <Route path="chat" element={<Chat />} />
-        <Route path='settings' element={<AccountSetting />}></Route>
-        <Route path='settings/password' element={<Password />}></Route>
-        <Route path='settings/email' element={<Email />}></Route>
+        <Route path="settings" element={<AccountSetting />}></Route>
+        <Route path="settings/password" element={<Password />}></Route>
+        <Route path="settings/email" element={<Email />}></Route>
         <Route path="*" element={<h1>404</h1>}></Route>
       </Route>
     )
   );
-
 
   return <RouterProvider router={router} />;
 }

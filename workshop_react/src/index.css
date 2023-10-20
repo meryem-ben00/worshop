@@ -11,11 +11,6 @@ main {
   padding: 30px;
 }
 
-/* .oldMain {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-} */
 
 @layer base {
   body {
