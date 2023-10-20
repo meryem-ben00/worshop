@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import React from "react";
 import NavBar from "./Navbar/NavBar";
-
 import data from "./Soufiane/Data";
 import List from "./Soufiane/Pages/ListDoctors";
 import AddNewUser from "./Soufiane/Pages/AddNewUser";
@@ -18,6 +17,9 @@ import RegisterPatient from "./pages/RegisterPatient";
 import Patients from "./pages/Patients";
 import Chat from "./pages/Chat";
 import Login from "./login/login";
+import AccountSetting from './Settings/Content/AccountSetting';
+import Password from './Settings/Content/Password';
+import Email from './Settings/Content/Email';
 
 
 
@@ -38,6 +40,9 @@ function App() {
         <Route path="registerPatient" element={<RegisterPatient />} />
         <Route path="patients" element={<Patients />} />
         <Route path="chat" element={<Chat />} />
+        <Route path='settings' element={<AccountSetting />}></Route>
+        <Route path='settings/password' element={<Password />}></Route>
+        <Route path='settings/email' element={<Email />}></Route>
         <Route path="*" element={<h1>404</h1>}></Route>
       </Route>
     )
