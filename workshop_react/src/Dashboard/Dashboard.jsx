@@ -28,7 +28,7 @@ function Dashboard() {
             </div>
         </div>
         <div className='grid grid-cols-12 grid-cols-1 gap-[30px] h-[350px] row-span-5'>
-          <div className='bg-white div1 col-span-5 overflow-auto rounded-[6px]'><PatientAreaChart /></div>
+          <div className='bg-white div1 col-span-5  rounded-[6px]'><PatientAreaChart /></div>
           <div className='bg-white div2 col-span-7 overflow-auto rounded-[6px]'><PatientOverviewChart /></div>
         </div>
         <div className='grid grid-cols-12 gap-[30px] h-[350px] row-span-5 mb-[35px]'>

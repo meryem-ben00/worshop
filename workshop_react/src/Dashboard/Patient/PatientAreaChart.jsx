@@ -33,7 +33,7 @@ function PatientAreaChart() {
       </div>
       <div className="patient_area_chart">
         <div className="grid grid-cols-2 items-center">
-          <div className='w-[500px] pr-[30px]'>
+          <div className='w-[430px] pr-[30px]'>
             <Line 
               data={{
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July"],

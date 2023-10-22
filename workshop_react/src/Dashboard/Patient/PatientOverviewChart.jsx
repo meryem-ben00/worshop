@@ -40,7 +40,7 @@ function PatientOverviewChart() {
       </div>
       <div className="patient_overview_chart">
         <div className="grid grid-cols-2 items-center">
-          <div className='w-[700px]'>
+          <div className='w-[600px]'>
             <Line 
               data={{
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July","Aug","Sep","Oct","Nov","Dec"],
