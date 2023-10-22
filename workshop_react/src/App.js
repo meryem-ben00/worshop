@@ -6,17 +6,6 @@ import {
 } from "react-router-dom";
 import React from "react";
 import NavBar from "./Navbar/NavBar";
-import data from "./Soufiane/Data";
-import List from "./Soufiane/Pages/ListDoctors";
-import AddNewUser from "./Soufiane/Pages/AddNewUser";
-import Details from "./Soufiane/Pages/EnterDetails";
-import Services from "./Soufiane/Pages/Services";
-import Review from "./Soufiane/Pages/Review";
-import Profile from "./DoctorProfile/profile";
-import RegisterPatient from "./pages/RegisterPatient";
-import Patients from "./pages/Patients";
-import Chat from "./pages/Chat";
-import Login from "./login/login";
 import AccountSetting from "./Settings/Content/AccountSetting";
 import Password from "./Settings/Content/Password";
 import Email from "./Settings/Content/Email";
@@ -27,18 +16,8 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<NavBar />}>
-        <Route path="login" element={<Login />} />
         <Route path="dashboard" element={<Dashboard />}></Route>
         <Route path="test" element={<Test />}></Route>
-        <Route path="doctors" element={<List data={data} />}></Route>
-        <Route path="add" element={<AddNewUser />}></Route>
-        <Route path="details" element={<Details />}></Route>
-        <Route path="services" element={<Services />}></Route>
-        <Route path="review" element={<Review />}></Route>
-        <Route path="users" element={<Profile />}></Route>
-        <Route path="registerPatient" element={<RegisterPatient />} />
-        <Route path="patients" element={<Patients />} />
-        <Route path="chat" element={<Chat />} />
         <Route path="settings" element={<AccountSetting />}></Route>
         <Route path="settings/password" element={<Password />}></Route>
         <Route path="settings/email" element={<Email />}></Route>
