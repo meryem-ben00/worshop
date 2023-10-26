@@ -8,6 +8,10 @@ const NavBar = () => {
 
   const [selected, setSelect] = useState(1);
   const [openBur, setBpenBur] = useState(-1);
+  const [showDoc, setShowDoc] = useState(false);
+  const handleMouseOver = () => {
+    setShowDoc(true)
+  }
 
   console.log(location);
   return location?.pathname === "/login" || location?.pathname === "/sign" ? (
@@ -42,12 +46,18 @@ const NavBar = () => {
                 </div>
               ) : (
                 <NavLink
-                  to={"/" + navName.toLowerCase()}
+                  to={"/" + (index !== 2 ? navName.toLowerCase() : 'user/doctors')}
                   key={index}
                   onClick={() => getIndex(index, setSelect)}
                   className={getTheDivStyle(index, selected)}
+                  onMouseOver={index === 2 ? handleMouseOver : () => { setShowDoc(false) }}
                 >
                   <p className={getThePtagStyle(index, selected)}>{navName}</p>
+                  {(index === 2) ?
+                    (<div style={{ display: showDoc === false ? 'none' : 'flex' }} className="absolute rounded-md flex justify-center items-center gap-[5px] w-[300px] h-[66px] bg-[#FAFAFA] text-[#1E2E5C]">
+                      <NavLink onClick={() => { setShowDoc(false) }} to={"/user/doctors"} style={{ background: location?.pathname === "/user/doctors" ? '#2E8544' : 'white' }} className="w-[40%] h-[60%]  ml-[3px] rounded-md flex justify-center items-center bg-opacity-40">Doctor</NavLink>
+                      <NavLink onClick={() => { setShowDoc(false) }} to={"/user/admin"} style={{ background: location?.pathname === "/user/admin" ? '#2E8544' : 'white' }} className="w-[50%] h-[60%] mr-[3px] rounded-md flex justify-center items-center bg-[#2E8544] bg-opacity-40">Administration</NavLink>
+                    </div>) : <></>}
                 </NavLink>
               );
             })}
