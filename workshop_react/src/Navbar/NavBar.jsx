@@ -10,7 +10,7 @@ const NavBar = () => {
   const [openBur, setBpenBur] = useState(-1);
 
   console.log(location);
-  return location?.pathname === "/login" ? (
+  return location?.pathname === "/login" || location?.pathname === "/sign" ? (
     <Outlet />
   ) : (
     <div className="bg-[#2E8544]">

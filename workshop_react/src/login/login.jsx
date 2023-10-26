@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 
 const Login = () => {
@@ -37,8 +38,12 @@ const Login = () => {
                         <img className="cursor-pointer w-[35px] h-[35px] p-[10px] border-[1px] rounded-sm" src="/images/facebook.svg" alt="Facebook" />
                         <img className="cursor-pointer w-[35px] h-[35px] p-[10px] border-[1px] rounded-sm" src="/images/x.svg" alt="Tweeter" />
                     </div>
-
-                    <button className="bg-[#2E8544] w-[60%] rounded-sm h-[34px] text-white mt-[10px] font-bold text-[11px]"> sign in </button>
+                    <div className="w-[100%] flex justify-center flex-col items-center gap-[2px]">
+                        <button className="bg-[#2E8544] w-[60%] rounded-sm h-[34px] text-white mt-[10px] font-bold text-[11px]"> Sign in </button>
+                        <NavLink className='w-[100%] flex justify-center flex-col items-center' to={'/sign'}>
+                            <button className="bg-[#1e2e5c] w-[60%] rounded-sm h-[34px] text-white font-bold text-[11px]"> Or Create account </button>
+                        </NavLink>
+                    </div>
                 </div>
             </div >
         </main >

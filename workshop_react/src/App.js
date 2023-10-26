@@ -22,12 +22,14 @@ import Password from "./Settings/Content/Password";
 import Email from "./Settings/Content/Email";
 import Test from "./Test/Content/Test";
 import Dashboard from "./Dashboard/Dashboard";
+import { SignIn } from "./Sign/Signin";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<NavBar />}>
         <Route path="login" element={<Login />} />
+        <Route path="sign" element={<SignIn />} />
         <Route path="dashboard" element={<Dashboard />}></Route>
         <Route path="test" element={<Test />}></Route>
         <Route path="doctors" element={<List data={data} />}></Route>
