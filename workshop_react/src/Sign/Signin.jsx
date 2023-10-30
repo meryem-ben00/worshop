@@ -40,7 +40,7 @@ export const SignIn = () => {
                 return;
             }
             console.log("call result: ", result);
-            navigate("/");
+            navigate("/dashboard");
         });
     };
 

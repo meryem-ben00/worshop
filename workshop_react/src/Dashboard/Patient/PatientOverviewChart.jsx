@@ -1,6 +1,6 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
-// import Chart from 'chart.js/auto';
+import Chart from 'chart.js/auto';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -40,7 +40,7 @@ function PatientOverviewChart() {
       </div>
       <div className="patient_overview_chart">
         <div className="grid grid-cols-2 items-center">
-          <div className='w-[600px]'>
+          <div className='w-[700px]'>
             <Line
               data={{
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],

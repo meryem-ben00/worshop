@@ -24,7 +24,7 @@ function ActivityChart() {
       </div>
       <div className="activity_chart">
         <div className="grid grid-cols-2 items-center justify-center">
-          <div className='w-[600px] pl-[40px] pr-[70px]'>
+          <div className='w-[700px] pl-[40px] pr-[70px]'>
             <Line 
               data={{
                 labels: ["", "", "", "", "", "", "","","","",""],

@@ -1,8 +1,24 @@
-import { useState } from "react";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { getIndex, getTheDivStyle, getThePtagStyle } from "./HelperFunctions";
+import { CognitoUserPool } from "amazon-cognito-identity-js";
+
+const userPool = new CognitoUserPool({
+  UserPoolId: process.env.REACT_APP_USERPOOL_ID,
+  ClientId: process.env.REACT_APP_APPCLIENT_ID,
+});
 
 const NavBar = () => {
+  useEffect(() => {
+    console.log(location);
+    const currentUser = userPool.getCurrentUser();
+    console.log(currentUser);
+    if (!currentUser && (location?.pathname !== "/login" || location?.pathname !== "/sign"))
+      navigate('/login')
+    else if (currentUser && (location?.pathname === "/login" || location?.pathname === "/sign"))
+      navigate('/dashboard')
+  }, [])
+  const navigate = useNavigate();
   const location = useLocation();
   const navList = ["", "Dashboard", "Users", "Patients", "Test", ""];
 
@@ -13,7 +29,7 @@ const NavBar = () => {
     setShowDoc(true)
   }
 
-  console.log(location);
+
   return location?.pathname === "/login" || location?.pathname === "/sign" ? (
     <Outlet />
   ) : (
@@ -45,20 +61,22 @@ const NavBar = () => {
                   </p>
                 </div>
               ) : (
-                <NavLink
-                  to={"/" + (index !== 2 ? navName.toLowerCase() : 'user/doctors')}
-                  key={index}
-                  onClick={() => getIndex(index, setSelect)}
-                  className={getTheDivStyle(index, selected)}
-                  onMouseOver={index === 2 ? handleMouseOver : () => { setShowDoc(false) }}
-                >
-                  <p className={getThePtagStyle(index, selected)}>{navName}</p>
+                <div key={index}>
+                  <NavLink
+                    to={"/" + (index !== 2 ? navName.toLowerCase() : 'user/doctors')}
+
+                    onClick={() => getIndex(index, setSelect)}
+                    className={getTheDivStyle(index, selected)}
+                    onMouseOver={index === 2 ? handleMouseOver : () => { setShowDoc(false) }}
+                  >
+                    <p className={getThePtagStyle(index, selected)}>{navName}</p>
+                  </NavLink>
                   {(index === 2) ?
                     (<div style={{ display: showDoc === false ? 'none' : 'flex' }} className="absolute rounded-md flex justify-center items-center gap-[5px] w-[300px] h-[66px] bg-[#FAFAFA] text-[#1E2E5C]">
                       <NavLink onClick={() => { setShowDoc(false) }} to={"/user/doctors"} style={{ background: location?.pathname === "/user/doctors" ? '#2E8544' : 'white' }} className="w-[40%] h-[60%]  ml-[3px] rounded-md flex justify-center items-center bg-opacity-40">Doctor</NavLink>
                       <NavLink onClick={() => { setShowDoc(false) }} to={"/user/admin"} style={{ background: location?.pathname === "/user/admin" ? '#2E8544' : 'white' }} className="w-[50%] h-[60%] mr-[3px] rounded-md flex justify-center items-center bg-[#2E8544] bg-opacity-40">Administration</NavLink>
                     </div>) : <></>}
-                </NavLink>
+                </div>
               );
             })}
           </div>

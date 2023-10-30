@@ -27,6 +27,7 @@ const Login = () => {
 
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: (result) => {
+                console.log(result)
                 cognitoUser.getUserAttributes(function (err, result) {
                     if (err) {
                         console.log("err", err);
@@ -38,7 +39,7 @@ const Login = () => {
                     //       email: values.email,
                     //     })
                     //   );
-                    navigate("/");
+                    navigate("/dashboard");
                 });
             },
             onFailure: (err) => {
@@ -64,11 +65,11 @@ const Login = () => {
                     <div className="flex flex-col justify-center w-[100%] items-center gap-[10px] mt-[27px]">
                         <div className="flex flex-col justify-center w-[55%] gap-[2px]">
                             <label className="text-[10px] font-normal">Email or Username</label>
-                            <input onChange={evt => setEmail(evt)} value={email} type="email" name="email" className="bg-[#DCDCDC] rounded-sm w-[100%]  h-[35px] p-[2px]" />
+                            <input onChange={evt => setEmail(evt.target.value)} type="email" name="email" className="bg-[#DCDCDC] rounded-sm w-[100%]  h-[35px] p-[2px]" />
                         </div>
                         <div className="flex flex-col justify-center w-[55%] gap-[2px]">
                             <label className="text-[10px] font-normal">Password</label>
-                            <input onChange={evt => setPassword(evt)} value={password} type="password" name="password" className="bg-[#DCDCDC] rounded-sm  w-[100%]  h-[35px]  p-[2px]" />
+                            <input onChange={evt => setPassword(evt.target.value)} type="password" name="password" className="bg-[#DCDCDC] rounded-sm  w-[100%]  h-[35px]  p-[2px]" />
                         </div>
                         <div className="w-[55%] flex gap-[5%]">
                             <input type="checkbox" name="checkbox" className="border-[#D9D9D9] border-[1px]" />
@@ -84,9 +85,9 @@ const Login = () => {
                         <img className="cursor-pointer w-[35px] h-[35px] p-[10px] border-[1px] rounded-sm" src="/images/x.svg" alt="Tweeter" />
                     </div>
                     <div className="w-[100%] flex justify-center flex-col items-center gap-[2px]">
-                        <button className="bg-[#2E8544] w-[60%] rounded-sm h-[34px] text-white mt-[10px] font-bold text-[11px]"> Sign in </button>
+                        <button onClick={() => { handleSubmit({ email, password }) }} className="bg-[#2E8544] w-[60%] rounded-sm h-[34px] text-white mt-[10px] font-bold text-[11px]"> Sign in </button>
                         <NavLink className='w-[100%] flex justify-center flex-col items-center' to={'/sign'}>
-                            <button onSubmit={() => { handleSubmit({ email, password }) }} className="bg-[#1e2e5c] w-[60%] rounded-sm h-[34px] text-white font-bold text-[11px]"> Or Create account </button>
+                            <button className="bg-[#1e2e5c] w-[60%] rounded-sm h-[34px] text-white font-bold text-[11px]"> Or Create account </button>
                         </NavLink>
                     </div>
                 </div>
