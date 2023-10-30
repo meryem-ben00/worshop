@@ -1,5 +1,5 @@
 import React from 'react';
-import { RiArrowUpSFill } from 'react-icons';
+// import { RiArrowUpSFill } from 'react-icons';
 import { Line } from 'react-chartjs-2';
 
 function PatientAreaChart() {
@@ -34,7 +34,7 @@ function PatientAreaChart() {
       <div className="patient_area_chart">
         <div className="grid grid-cols-2 items-center">
           <div className='w-[430px] pr-[30px]'>
-            <Line 
+            <Line
               data={{
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July"],
                 datasets: [
@@ -46,7 +46,7 @@ function PatientAreaChart() {
                     borderColor: ['rgb(95,195,176)'],
                     borderWidth: 4,
                     pointBorderWidth: 0,
-                    tension:0.5,
+                    tension: 0.5,
 
                   },
                   {
@@ -57,7 +57,7 @@ function PatientAreaChart() {
                     borderColor: ['rgb(153,155,156)'],
                     borderWidth: 4,
                     pointBorderWidth: 0,
-                    tension:0.5,
+                    tension: 0.5,
 
 
                   }
@@ -68,9 +68,9 @@ function PatientAreaChart() {
               options={{
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: {
-                        display: false,
-                      },
+                  legend: {
+                    display: false,
+                  },
                   tooltip: {
                     enabled: true,
                   },

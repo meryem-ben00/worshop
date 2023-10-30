@@ -1,7 +1,52 @@
-import { NavLink } from "react-router-dom";
+import { AuthenticationDetails, CognitoUser, CognitoUserPool } from "amazon-cognito-identity-js";
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
+
+const userPool = new CognitoUserPool({
+    UserPoolId: process.env.REACT_APP_USERPOOL_ID,
+    ClientId: process.env.REACT_APP_APPCLIENT_ID,
+});
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = (values) => {
+        const cognitoUser = new CognitoUser({
+            Username: values.email,
+            Pool: userPool,
+        });
+
+        const authenticationDetails = new AuthenticationDetails({
+            Username: values.email,
+            Password: values.password,
+        });
+
+        cognitoUser.authenticateUser(authenticationDetails, {
+            onSuccess: (result) => {
+                cognitoUser.getUserAttributes(function (err, result) {
+                    if (err) {
+                        console.log("err", err);
+                        return;
+                    }
+                    //   dispatch(
+                    //     updateData({
+                    //       name: result[2].Value,
+                    //       email: values.email,
+                    //     })
+                    //   );
+                    navigate("/");
+                });
+            },
+            onFailure: (err) => {
+                console.log("login failed", err);
+            },
+        });
+    };
+
     return (
         <main className="items-center justify-center h-screen">
             <div className="flex flex-col bg-white w-[640.8px] rounded-lg pt-[2%] pb-[5%]">
@@ -19,11 +64,11 @@ const Login = () => {
                     <div className="flex flex-col justify-center w-[100%] items-center gap-[10px] mt-[27px]">
                         <div className="flex flex-col justify-center w-[55%] gap-[2px]">
                             <label className="text-[10px] font-normal">Email or Username</label>
-                            <input type="email" name="email" className="bg-[#DCDCDC] rounded-sm w-[100%]  h-[35px] p-[2px]" />
+                            <input onChange={evt => setEmail(evt)} value={email} type="email" name="email" className="bg-[#DCDCDC] rounded-sm w-[100%]  h-[35px] p-[2px]" />
                         </div>
                         <div className="flex flex-col justify-center w-[55%] gap-[2px]">
                             <label className="text-[10px] font-normal">Password</label>
-                            <input type="password" name="password" className="bg-[#DCDCDC] rounded-sm  w-[100%]  h-[35px]  p-[2px]" />
+                            <input onChange={evt => setPassword(evt)} value={password} type="password" name="password" className="bg-[#DCDCDC] rounded-sm  w-[100%]  h-[35px]  p-[2px]" />
                         </div>
                         <div className="w-[55%] flex gap-[5%]">
                             <input type="checkbox" name="checkbox" className="border-[#D9D9D9] border-[1px]" />
@@ -41,7 +86,7 @@ const Login = () => {
                     <div className="w-[100%] flex justify-center flex-col items-center gap-[2px]">
                         <button className="bg-[#2E8544] w-[60%] rounded-sm h-[34px] text-white mt-[10px] font-bold text-[11px]"> Sign in </button>
                         <NavLink className='w-[100%] flex justify-center flex-col items-center' to={'/sign'}>
-                            <button className="bg-[#1e2e5c] w-[60%] rounded-sm h-[34px] text-white font-bold text-[11px]"> Or Create account </button>
+                            <button onSubmit={() => { handleSubmit({ email, password }) }} className="bg-[#1e2e5c] w-[60%] rounded-sm h-[34px] text-white font-bold text-[11px]"> Or Create account </button>
                         </NavLink>
                     </div>
                 </div>
