@@ -22,20 +22,22 @@ import Password from "./Settings/Content/Password";
 import Email from "./Settings/Content/Email";
 import Test from "./Test/Content/Test";
 import Dashboard from "./Dashboard/Dashboard";
+import { SignIn } from "./Sign/Signin";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<NavBar />}>
         <Route path="login" element={<Login />} />
+        <Route path="sign" element={<SignIn />} />
         <Route path="dashboard" element={<Dashboard />}></Route>
         <Route path="test" element={<Test />}></Route>
-        <Route path="doctors" element={<List data={data} />}></Route>
         <Route path="add" element={<AddNewUser />}></Route>
         <Route path="details" element={<Details />}></Route>
         <Route path="services" element={<Services />}></Route>
         <Route path="review" element={<Review />}></Route>
-        <Route path="users" element={<Profile />}></Route>
+        <Route path="user/doctors" element={<List data={data} />}></Route>
+        <Route path="user/admin" element={<Profile />}></Route>
         <Route path="registerPatient" element={<RegisterPatient />} />
         <Route path="patients" element={<Patients />} />
         <Route path="chat" element={<Chat />} />
