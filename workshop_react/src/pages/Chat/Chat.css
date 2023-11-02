@@ -1,0 +1,21 @@
+.conversationCard {
+  filter: drop-shadow(0px 0px 8px #b7b9ff);
+  border-radius: 10px;
+  border: 1px solid #dfe0eb;
+  background: #fff;
+}
+
+.searchBarChat {
+  filter: drop-shadow(0px 0px 3px #e1e2ff);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.imageAvatar {
+  border-radius: 64px;
+  /* background: url(""), lightgray 50% / cover no-repeat; */
+}
+
+.conversationHeader {
+  border-bottom: 1px solid #dfe0eb;
+}

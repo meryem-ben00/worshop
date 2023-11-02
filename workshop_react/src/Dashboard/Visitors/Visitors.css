@@ -1,0 +1,55 @@
+
+.visitor_number{
+    color: #4FA746;
+
+}
+
+
+
+.bar{
+    background-color: #E9ECEF;
+}
+
+
+.bar .percentage_pie{
+    background: linear-gradient(135deg, #854D9C, #D04ED6);
+}
+
+.bar .percentage_bar{
+    background: linear-gradient(135deg, #ED8F9A, #EA6D8E);
+}
+
+.bar .percentage_line{
+    background: linear-gradient(135deg, #58AC30, #A7E063);
+}
+
+.bar .percentage_area{
+    background: linear-gradient(135deg, #ED9720, #F5D103);
+}
+
+.percentage_pie{
+    width: 45%;
+}
+
+.percentage_bar{
+    width: 45%;
+}
+
+.percentage_line{
+    width: 45%;
+}
+
+.percentage_area{
+    width: 45%;
+}
+
+
+
+
+
+
+
+
+
+
+

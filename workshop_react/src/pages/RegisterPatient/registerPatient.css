@@ -1,0 +1,26 @@
+body {
+  /* Suggestion: so all the interfaces have the same background color so if we add this style to the body we will be solving alot of problems*/
+  background-color: #1e2e5c;
+}
+.inputForm {
+  background: rgba(217, 217, 217, 0.58);
+}
+
+.inputForm:focus {
+  outline-style: none;
+}
+
+.houseAddressInput::placeholder {
+  color: white;
+}
+.submitButton {
+  transition: all 0.2s ease-in;
+}
+.submitButton:hover {
+  background-color: #0e3d1a;
+}
+
+.line {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}

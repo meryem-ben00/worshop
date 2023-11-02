@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-workshopreact-dev-135006-authRole",
+      "UnauthRoleArn": "arn:aws:iam::702690360465:role/amplify-workshopreact-dev-135006-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::702690360465:role/amplify-workshopreact-dev-135006-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-workshopreact-dev-135006-deployment",
+      "UnauthRoleName": "amplify-workshopreact-dev-135006-unauthRole",
+      "StackName": "amplify-workshopreact-dev-135006",
+      "StackId": "arn:aws:cloudformation:us-east-1:702690360465:stack/amplify-workshopreact-dev-135006/0687e2e0-77ec-11ee-946c-0a47e6ce1d0b",
+      "AmplifyAppId": "d1dyp8abnlycxn"
+    },
+    "frontend": {
+      "frontend": "C: \\My Work\\worshop\\workshop_react\\"
+    },
+    "categories": {
+      "auth": {
+        "workshopreact094cea0d": {}
+      }
+    }
+  }
+}
